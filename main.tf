@@ -1,5 +1,5 @@
 terraform {
-    required_providers {
+  required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
@@ -8,7 +8,7 @@ terraform {
 
 
   backend "s3" {
-    key    = "terraform.tfstate"
+    key = "terraform.tfstate"
   }
 }
 
@@ -17,12 +17,12 @@ provider "aws" {
   profile = local.profile
 }
 
-data "aws_ecr_repository" "ecr-repository" {
-  name = "react-app"
-}
+# data "aws_ecr_repository" "ecr-repository" {
+#   name = "react-app"
+# }
 
-data "aws_network_interfaces" "interfaces" {
-  tags = {
-    ALIAS_PROJECT = "Depoy React App in AWS ECS"
-  }
-}
+# data "aws_network_interfaces" "interfaces" {
+#   tags = {
+#     ALIAS_PROJECT = "Depoy React App in AWS ECS"
+#   }
+# }

@@ -19,8 +19,8 @@ resource "aws_route_table" "rt-public" {
     cidr_block = "0.0.0.0/0"
     gateway_id = local.igw_id
   }
-  
-  tags = merge({ Name = "rt-public" }, var.common_tags, {COMMENT = "Rota de saida para internet"})
+
+  tags = merge({ Name = "rt-public" }, var.common_tags, { COMMENT = "Rota de saida para internet" })
 }
 
 resource "aws_route_table_association" "associate-a" {
