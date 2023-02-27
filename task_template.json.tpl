@@ -1,0 +1,15 @@
+[
+     {
+     "name":"${container_name}",
+     "image":"${container_image}",
+     "essential":true,
+     "portMappings":[
+          {
+               "containerPort":${container_port},
+               "hostPort":${container_host_port}
+          }
+     ],    
+     "memory":${container_memory_limit},
+     "cpu":${container_cpu_limit}
+     }
+]
